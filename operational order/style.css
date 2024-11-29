@@ -1,0 +1,46 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.whitecolor {
+    background-color: #ffffffff;
+}
+
+.lightcolor {
+    background-color: #f4f5fc;
+}
+
+.textcolorblack {
+    color: #181f20;
+}
+
+.textcolorblacklight {
+    color: #434343;
+}
+
+.textcolorgray {
+    color: #8d8d8d;
+}
+
+.textcolornew {
+    color: #6f785b;
+}
+
+.textcolorbluelight {
+    color: #5c86c5;
+}
+
+.regicard {
+    width: 343px;
+    height: 300px;
+    border-radius: 44px;
+    background-color: #ffffffff;
+    padding: 20px;
+}
+
+.addimage {
+    background-color: #ffffffff;
+    width: 100%;
+    height: 300px;
+}

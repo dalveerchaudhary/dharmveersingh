@@ -1,4 +1,9 @@
 body {
+    height: 100%;
+    width: 100%;
+}
+
+* {
     margin: 0;
     padding: 0;
 }
@@ -51,21 +56,34 @@ body {
     align-items: center;
 }
 
+.paddingleft {
+    padding-left: 21px;
+}
+
+.paddingzero {
+    padding: 0px;
+}
+
+.width100 {
+    width: 100%;
+}
+
 .navbarho a.active {
     background-color: #f5f7f9;
-    padding: 10px;
     width: 100%;
-    border-radius: 44px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .navbarho a:hover {
     background-color: #f5f7f9;
-    padding: 10px;
+    display: block;
     width: 100%;
-    border-radius: 44px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .buttonho button:hover {
     background-color: #80bb32;
-    color: #252525;
+    color: #f3f3f3;
 }

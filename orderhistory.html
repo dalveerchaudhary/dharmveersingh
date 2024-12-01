@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Order History</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* On mobile, initially show only the menu */
+        .content-section {
+            display: none;
+        }
+
+        .menu-section {
+            display: block;
+        }
+
+        /* On larger screens, always show both menu and content */
+        @media (min-width: 992px) {
+            .menu-section {
+                display: block !important;
+            }
+
+            .content-section {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Header -->
+        <header class="bg-success text-white py-3">
+            <div class="container d-flex justify-content-between align-items-center">
+                <h1 class="h4 m-0">ao</h1>
+                <div>Anuar</div>
+            </div>
+        </header>
+
+        <div class="container mt-4">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3 menu-section" id="menu-section">
+                    <ul class="list-group" id="menu">
+                        <li class="list-group-item active" data-target="orders">View Orders</li>
+                        <li class="list-group-item" data-target="personal-details">Personal Details</li>
+                        <li class="list-group-item" data-target="change-password">Change Password</li>
+                        <li class="list-group-item" data-target="payment-methods">Payment Methods</li>
+                        <li class="list-group-item" data-target="manage-addresses">Manage Addresses</li>
+                        <li class="list-group-item" data-target="social-accounts">Social Accounts</li>
+                        <li class="list-group-item" data-target="logout">Log Out</li>
+                    </ul>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <!-- Go Back Button -->
+                    <div class="d-block d-lg-none mb-3">
+                        <button class="btn btn-outline-secondary btn-sm" id="go-back" style="display: none;">Go
+                            Back</button>
+                    </div>
+
+                    <!-- View Orders -->
+                    <div class="content-section" id="orders" style="display: block;">
+                        <h2>Order History</h2>
+                        <p>3 orders</p>
+                        <div class="mb-4">
+                            <h5 class="text-success">Dispatched</h5>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <strong>Arrives tomorrow</strong>
+                                            <p class="mb-1">7am - 7pm</p>
+                                        </div>
+                                        <button class="btn btn-success btn-sm">Track Order</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Details -->
+                    <div class="content-section" id="personal-details">
+                        <h2>Personal Details</h2>
+                        <p>Your personal details go here.</p>
+                    </div>
+
+                    <!-- Change Password -->
+                    <div class="content-section" id="change-password">
+                        <h2>Change Password</h2>
+                        <p>Change your password here.</p>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="content-section" id="payment-methods">
+                        <h2>Payment Methods</h2>
+                        <p>Manage your payment methods here.</p>
+                    </div>
+
+                    <!-- Manage Addresses -->
+                    <div class="content-section" id="manage-addresses">
+                        <h2>Manage Addresses</h2>
+                        <p>Update your addresses here.</p>
+                    </div>
+
+                    <!-- Social Accounts -->
+                    <div class="content-section" id="social-accounts">
+                        <h2>Social Accounts</h2>
+                        <p>Link your social accounts here.</p>
+                    </div>
+
+                    <!-- Logout -->
+                    <div class="content-section" id="logout">
+                        <h2>Log Out</h2>
+                        <p>Are you sure you want to log out?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuItems = document.querySelectorAll('#menu .list-group-item');
+            const contentSections = document.querySelectorAll('.content-section');
+            const menuSection = document.getElementById('menu-section');
+            const goBackButton = document.getElementById('go-back');
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    // Hide all content sections
+                    contentSections.forEach(section => section.style.display = 'none');
+
+                    // Remove active class from all menu items
+                    menuItems.forEach(menu => menu.classList.remove('active'));
+
+                    // Show the selected section
+                    const targetId = this.getAttribute('data-target');
+                    document.getElementById(targetId).style.display = 'block';
+
+                    // Add active class to the clicked menu item
+                    this.classList.add('active');
+
+                    // Hide menu and show go back button on mobile
+                    menuSection.style.display = 'none';
+                    goBackButton.style.display = 'block';
+                });
+            });
+
+            // Go back button functionality
+            goBackButton.addEventListener('click', function () {
+                // Show the menu and hide all content on mobile
+                menuSection.style.display = 'block';
+                contentSections.forEach(section => section.style.display = 'none');
+                this.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>

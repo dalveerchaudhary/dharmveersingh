@@ -24,12 +24,21 @@ body {
     color: #252525;
 }
 
+.border-leftactiv {
+    border-left: 3px solid #aebbdf;
+}
+
+.border-left {
+    border-left: 3px solid #abafae;
+}
+
+
 .text-color2 {
     color: #abafae;
 }
 
 .text-color3 {
-    color: #aebbdf;
+    color: #6885d5;
 }
 
 .text-color4 {
@@ -68,6 +77,10 @@ body {
     width: 100%;
 }
 
+.b_shadow {
+    box-shadow: 0 2px 4px 0 rgba(85, 85, 85, 0.2), 0 4px 10px 0 rgba(96, 96, 96, 0.19);
+}
+
 .navbarho a.active {
     background-color: #f5f7f9;
     width: 100%;
@@ -76,8 +89,9 @@ body {
 }
 
 .navbarho a:hover {
-    background-color: #f5f7f9;
     display: block;
+    background-color: #f5f7f9;
+    color: #6885d5;
     width: 100%;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;

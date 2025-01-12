@@ -1,0 +1,131 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.whitecolor {
+    background-color: #ffffffff;
+}
+
+.lightcolor {
+    background-color: #f4f5fc;
+}
+
+.lightbluecolor {
+    background-color: #edf4fe;
+}
+
+.textcolorblack {
+    color: #181f20;
+}
+
+.textcolorblacklight {
+    color: #434343;
+}
+
+.textcolorgray {
+    color: #8d8d8d;
+}
+
+.textcolornew {
+    color: #6f785b;
+}
+
+.textcolorbluelight {
+    color: #5c86c5;
+}
+
+.textcolorblue {
+    color: #819cc4;
+}
+
+.border_radius {
+    border-radius: 12px;
+}
+
+.border_radius-50 {
+    border-radius: 50%;
+}
+
+.font_size-12 {
+    font-size: 12px;
+}
+
+.b_shadow {
+    box-shadow: 0 4px 4px 0 rgba(85, 85, 85, 0.2), 0 4px 10px 0 rgba(96, 96, 96, 0.19);
+}
+
+.regicard {
+    border-radius: 24px;
+    background-color: #ffffffff;
+    padding: 20px;
+    border: 1px solid #cdcdcd;
+}
+
+.addimage {
+    background-color: #ffffffff;
+}
+
+.shadow-none {
+    box-shadow: none;
+    /* outline: none; */
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+    box-shadow: none;
+}
+
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.dropzone {
+    width: 100%;
+    height: 170px;
+    border: 2px dashed #0d6efd;
+    background-color: #edf4fe;
+    border-radius: 8px;
+    padding: 97px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.preview img {
+    max-width: 30px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-start;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.delete-btn {
+    position: absolute;
+    top: -11px;
+    right: 0px;
+    /* background-color: rgb(234, 64, 64); */
+    color: rgb(154, 151, 151);
+    border: none;
+    border-radius: 50%;
+    /* padding: 2px 2px; */
+    cursor: pointer;
+}

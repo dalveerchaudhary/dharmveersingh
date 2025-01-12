@@ -8,7 +8,7 @@ body {
 }
 
 .lightcolor {
-    background-color: #f4f5fc;
+    background-color: #e9ecf3;
 }
 
 .lightbluecolor {
@@ -46,6 +46,7 @@ body {
 .border_radius-50 {
     border-radius: 50%;
 }
+
 
 .font_size-12 {
     font-size: 12px;
@@ -129,3 +130,49 @@ body {
     /* padding: 2px 2px; */
     cursor: pointer;
 }
+
+.step {
+    padding: 0 20px 24px 50px;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    /* background-color: #db2a2a; */
+  }
+  .step::before {
+  content: '';
+  position: absolute;
+  height: 13px;
+  width: 13px;
+  background-color: rgb(198, 19, 198);
+  border-radius: 15px;
+  left: calc(50px / 2);
+  transform: translateX(-45%);
+  z-index: 2;
+}
+
+  .step::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background-color: rgb(198, 198, 198);
+    left: calc(50px / 2);
+    top: 0;
+
+    z-index: 1;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

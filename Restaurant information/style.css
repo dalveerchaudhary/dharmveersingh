@@ -66,6 +66,18 @@ body {
 .addimage {
     background-color: #ffffffff;
 }
+.input-wrapper {
+    position: relative;
+  }
+  
+.label-text {
+    position: absolute;
+    top: -10px;
+    z-index: 1;
+    left: 2em;
+    background-color: white;
+    padding: 0 5px;
+  }
 
 .step {
     padding: 0 20px 24px 50px;
